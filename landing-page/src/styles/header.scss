@@ -1,0 +1,23 @@
+.Header {
+    background-color: $Black;
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        li {
+            list-style: none;
+            &:hover {
+                color:$Grey;
+                transition: .25s ease;
+                cursor: pointer;
+            }
+        }
+    }
+    h1 {
+        color: white;
+        font-family: $ShadowsIntoLight;
+        font-weight: lighter;
+        font-size: 1.75rem;
+    }
+}
