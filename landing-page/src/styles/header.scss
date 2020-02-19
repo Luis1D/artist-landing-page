@@ -1,5 +1,14 @@
 .Header {
     background-color: $Black;
+    height: 3rem;
+    padding-top: .5rem;
+    box-shadow: 0 1rem 1.25rem 0 rgba(0, 0, 0, 0.473);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+
     ul {
         display: flex;
         justify-content: space-evenly;
@@ -14,10 +23,8 @@
             }
         }
     }
-    h1 {
-        color: white;
-        font-family: $ShadowsIntoLight;
-        font-weight: lighter;
-        font-size: 1.75rem;
+    .nav-icon {
+        width: 2.5rem;
     }
+    
 }

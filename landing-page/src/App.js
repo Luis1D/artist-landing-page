@@ -7,6 +7,9 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <div className="Section">
+        <h1 className="Logo">Betz<br/>Beats</h1>
+      </div>
     </div>
   );
 }
