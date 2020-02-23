@@ -1,7 +1,6 @@
 .Header {
     background-color: $Black;
-    height: 3rem;
-    padding-top: .5rem;
+    // height: 4rem;
     box-shadow: 0 1rem 1.25rem 0 rgba(0, 0, 0, 0.473);
     position: fixed;
     top: 0;
@@ -16,6 +15,7 @@
 
         li {
             list-style: none;
+            margin: 1rem 0 1rem 0;
             &:hover {
                 color:$Grey;
                 transition: .25s ease;

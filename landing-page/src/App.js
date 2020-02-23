@@ -9,7 +9,13 @@ function App() {
     <div className="App">
       <Header />
       <div className="Section">
-        <h1 className="Logo">Betz<br/>Beats</h1>
+        <div className="line-container">
+          <div className="line l-one"></div>
+          <div className="line 2-one"></div>
+          <div className="line 3-one"></div>
+          <div className="line 4-one"></div>
+          <h1 className="Logo">Betz<br/>Beats</h1>
+        </div>
       </div>
       <Songs />
       <footer></footer>
