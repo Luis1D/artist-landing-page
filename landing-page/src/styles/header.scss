@@ -1,6 +1,5 @@
 .Header {
     background-color: $Black;
-    // height: 4rem;
     box-shadow: 0 1rem 1.25rem 0 rgba(0, 0, 0, 0.473);
     position: fixed;
     top: 0;
@@ -12,6 +11,8 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        max-width: 50rem;
+        margin: 0 auto;
 
         li {
             list-style: none;
