@@ -21,6 +21,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={ Albums } />
         <Route path="/Songs" component={ Songs } />
+        <Route path="*" component={ Albums } />
         <Redirect to="/" />
       </Switch>
       {/* <Albums />
