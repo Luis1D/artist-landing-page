@@ -73,6 +73,19 @@ const Songs = () => {
                         <h4>2019 - Album</h4>
                         <p>A description of the album in a few sent. Some random words will go here. and here again.</p>
                     </div>
+                    {/* album */}
+                    <div className="album-container">
+                        <div className="img-container">
+                            <img 
+                                src={require('../assets/anna.jpg')}
+                                alt="song"
+                                className="song-img"
+                            />
+                        </div>
+                        <h3>Album Title</h3>
+                        <h4>2020 - Album</h4>
+                        <p>A description of the album in a few sent. Some random words will go here. and here again.</p>
+                    </div>
                 </div>
             </div>
 

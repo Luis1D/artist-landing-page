@@ -1,26 +1,18 @@
 .Contact {
-    background-color: $Char;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.473);
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 1.5rem;
-    right: 2rem;
-    z-index: 1;
+    outline: none;
 
-    button {
-        color: $White;
-        border: none;
+    .contact-btn {
+        position: fixed;
+        height: 5rem;
+        width: 5rem;
+        bottom: 1.5rem;
+        right: 2rem;
         background-color: $Char;
-        width: 100%;
-        height: 100%;
-        outline: none;
-        font-size: 1.5rem;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.473);
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        z-index: 10;
+        border: none;
+        outline: none;
         &:hover {
             cursor: pointer;
             transition: .25s ease;
@@ -28,8 +20,65 @@
             border: .25rem solid $Char;
 
         }
+        span {
+            color: $White;
+            font-size: 2.5rem;
+        }
     }
     img {
         width: 3rem;
+    }
+    .contact-pop-up {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 5rem;
+        background-image: linear-gradient(rgb(27, 27, 27),rgb(0, 0, 0));
+        z-index: 5;
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 2.5rem;
+        }
+        form {
+            margin: 0 auto;
+            margin-top: 2.5rem;
+            max-width: 30rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .submit {
+                width: 50%;
+                height: 2rem;
+                border: none;
+                outline: none;
+                font-size: 1.1rem;
+                margin-top: .25rem;
+            }
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;;
+            margin: 1rem;
+            width: 90%;
+
+            label {
+                font-size: 1.25rem;
+                margin-bottom: .25rem;
+            }
+            input {
+                width: 100%;
+                border: none;
+                border-bottom: .1rem solid $Black;
+                height: 2.5rem;
+                padding: 0 .5rem 0 .5rem;
+                background-color: $Char;
+                color: $White;
+                font-size: .85rem;
+            }
+        }
     }
 }
