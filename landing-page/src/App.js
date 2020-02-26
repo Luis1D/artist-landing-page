@@ -1,9 +1,12 @@
 import React from 'react';
 import './styles/app.scss';
 import Songs from './components/Songs';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import Header from './components/Header';
 import Contact from './components/Contact';
+import Albums from './components/Albums';
+import Nav from './components/Nav';
 
 function App() {
   return (
@@ -14,7 +17,14 @@ function App() {
           <h1 className="Logo">Betz<br/>Beatz</h1>
         </div>
       </div>
-      <Songs />
+      <Nav />
+      <Switch>
+        <Route exact path="/" component={ Albums } />
+        <Route path="/Songs" component={ Songs } />
+        <Redirect to="/" />
+      </Switch>
+      {/* <Albums />
+      <Songs /> */}
       <Contact />
       <footer></footer>
     </div>

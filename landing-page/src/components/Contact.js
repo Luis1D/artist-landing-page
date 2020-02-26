@@ -22,7 +22,6 @@ const Contact = () => {
                         src={ require('../assets/mail.svg') }
                         alt="mail"
                     />
-
                 }
             </button>
             {contactBtn ?

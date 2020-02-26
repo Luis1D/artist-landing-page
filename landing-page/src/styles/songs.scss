@@ -1,66 +1,26 @@
 @import 'variables';
 
-.Songs {
-    width: 90%;
+#Songs {
+    max-width: 50rem;
+    height: 30rem;
     margin: 0 auto;
     margin-top: 5rem;
-
-    h2 {
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        text-align: center;
-    }
-    .img-container {
-        width: 15rem;
-        height: 14rem;
+    overflow: scroll;
+    .wrapper {
+        padding: 1rem .25rem 1rem .25rem;
+        width: 95%;
+        background-color: rgba(255, 255, 255, 0.041);
         margin: 0 auto;
-        overflow: hidden;
     }
-    .song-img {
-        width: 100%;
+    h2 {
+        text-align: center;
+        margin: .5rem 0 1rem 0;
     }
-    h3 {
-        font-size: 1.5rem;
-        text-transform: uppercase;
+    .cell {
+        border: 1px solid $Black;
+        margin: .25rem;
+        padding: .25rem;
+        height: 2rem;
     }
-    p {
-        color: $DimWhite;
-    }
-    .album-container {
-            z-index: -100;
-            padding: 1rem;
-            height: 27rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            text-align: center;
-        }
-    @media(max-width: 550px) {
-        .album-flex {
-            width: 100%;
-            height: 30rem;
-            margin: 0 auto;
-            overflow: scroll;
-            box-shadow: inset 0 0 3rem #000000c7;
-            z-index: 100;
-        }
-        .wrapper {
-            display: flex;
-            width: 110rem;
-        }
-        
-    }
-    @media(min-width: 550px) {
-        .wrapper {
-            display: flex;
-            flex-flow: wrap;
-            max-width: 80rem;
-            margin: 0 auto;
-            justify-content: center;
-        } 
-        .album-container {
-            width: 20rem;
-            height: 25rem;
-        }      
-    }
+
 }
