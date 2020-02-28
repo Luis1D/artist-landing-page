@@ -2,10 +2,8 @@
 
 #Songs {
     max-width: 50rem;
-    height: 30rem;
     margin: 0 auto;
     margin-top: 5rem;
-    overflow: scroll;
     .wrapper {
         padding: 1rem .25rem 1rem .25rem;
         width: 95%;
@@ -23,4 +21,32 @@
         height: 2rem;
     }
 
+}
+
+#MediaPlayer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: $Black;
+    padding: 1rem;
+
+    .mp-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+    .pause-btn {
+        width: 1.75rem;
+    }
+    .skip-backward {
+        transform: rotate(180deg);
+    }
+    .pause-play {
+        width: 7rem;
+        display: flex;
+        justify-content: space-between;
+    }
 }

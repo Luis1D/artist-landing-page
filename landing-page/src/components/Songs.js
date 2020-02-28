@@ -1,4 +1,5 @@
 import React from 'react';
+import MediaPlayer from './MediaPlayer';
 
 const Songs = () => {
     return (
@@ -21,6 +22,7 @@ const Songs = () => {
                 <div className="cell"></div>
                 <div className="cell"></div>
             </div>
+            <MediaPlayer />
         </div>
     )
 }
