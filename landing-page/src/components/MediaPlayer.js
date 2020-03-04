@@ -2,14 +2,6 @@ import React, { useState,useEffect } from 'react';
 
 const MediaPlayer = props => {
     const [trackDur, setTrackDur] = useState();
-        
-
-    // console.log(trackDur);
-    // let rawSec = audio.duration;
-    // let minutes = Math.floor(rawSec / 60);
-    // let seconds = rawSec - minutes * 60;
-    // let duration = minutes + ":" + Math.floor(seconds)
-    // console.log(minutes + ":" + Math.floor(seconds))
 
     const playTrack = () => {
         if (props.track) {
@@ -36,7 +28,7 @@ const MediaPlayer = props => {
                 props.track ? <div>
                     <span>{ props.trackData.title }</span>
                     <br />
-                    <span>{ props.track.duration }</span>
+                    <span>{ props.trackData.duration }</span>
                 </div> : null
                 }
             </div>

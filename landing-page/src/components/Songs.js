@@ -13,23 +13,24 @@ const Songs = () => {
     }
 
     const playSong = (link, title) => {
+        // PAUSE ALL AUDIO
         audioList.forEach(item => {
             item.pause();
         })
+        // SET SELECTED AUDIO
         const currentAudio = audioList.filter(url => url.src === link);
-        console.log(currentAudio);
         setAudio(currentAudio[0]);
-        setAudioData({
-            title: title
-        })
-    }
-    
-    const convertDur = () => {
-        let rawSec = audio.duration;
+        // CONVERT SECONDS TO MINUTES:SECONDS
+        const filtered = audioList.filter(item => item.src === link);
+        let rawSec = filtered[0].duration;
         let minutes = Math.floor(rawSec / 60);
         let seconds = rawSec - minutes * 60;
         let duration = `${minutes}:${Math.floor(seconds)}`;
-        console.log(duration)
+        // PACKAGE AUDIO DATA
+        setAudioData({
+            title: title,
+            duration: duration
+        })
     }
 
     return (
@@ -40,7 +41,6 @@ const Songs = () => {
                     songs.map(song => {
                         return <div className="cell" key={ song.id } onClick={() => playSong(song.link, song.title)}>
                         { createAudioData(song.link) }
-                        { console.log(song) }
                             <div className="song-album">
                                 <span className="song-title">{ song.title }</span>
                             </div>
