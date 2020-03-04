@@ -26,7 +26,7 @@ function App() {
       </Switch>
       {/* <Albums />
       <Songs /> */}
-      <Contact />
+      {/* <Contact /> */}
       <footer></footer>
     </div>
   );

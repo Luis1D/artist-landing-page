@@ -7,7 +7,6 @@
     .wrapper {
         padding: 1rem .25rem 1rem .25rem;
         width: 95%;
-        background-color: rgba(255, 255, 255, 0.041);
         margin: 0 auto;
     }
     h2 {
@@ -15,12 +14,49 @@
         margin: .5rem 0 1rem 0;
     }
     .cell {
-        border: 1px solid $Black;
-        margin: .25rem;
-        padding: .25rem;
-        height: 2rem;
+        margin: .25rem .25rem 1rem .25rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        color: $DimWhite;
+        border: 1px solid $Char;
+        &:hover {
+            border: 1px solid grey;
+            transition: .25s ease;
+            cursor: pointer;
+        }
+        button {
+            width: 5rem;
+            height: 1.5rem;
+            border: none;
+            padding: .25rem;
+            outline: none;
+            &:hover {
+                cursor: pointer;
+                background-color: $Char;
+                color: $White;
+                transition: .25s;
+            }
+            &:active {
+
+                background-color: red;
+            }
+        }
     }
 
+    .song-album {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 2.5rem;
+    }
+    .song-title {
+        font-size: 1.25rem;
+        margin-bottom: .25rem;
+        color: $White;
+    }
 }
 
 #MediaPlayer {
@@ -28,25 +64,28 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: $Black;
-    padding: 1rem;
+    background-color: $Char;
+    padding: 1rem 0 1rem 0;
 
     .mp-wrapper {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        max-width: 50rem;
+        justify-content: space-between;
+        max-width: 40rem;
         margin: 0 auto;
+        padding: 0 2rem 0 2rem;
     }
     .pause-btn {
         width: 1.75rem;
     }
-    .skip-backward {
-        transform: rotate(180deg);
-    }
     .pause-play {
-        width: 7rem;
+        width: 4rem;
         display: flex;
         justify-content: space-between;
+    }
+    img {
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
