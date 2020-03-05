@@ -61,28 +61,48 @@
 
 #MediaPlayer {
     width: 100%;
-    height: 2rem;
+    height: 5rem;
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: $Char;
     padding: 1rem 0 1rem 0;
+    background-image: linear-gradient(rgb(27, 27, 27),rgb(0, 0, 0));
 
     .mp-wrapper {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         max-width: 40rem;
+        height: 100%;
         margin: 0 auto;
         padding: 0 2rem 0 2rem;
     }
     .pause-btn {
         width: 1.75rem;
     }
+    .play-btn {
+        width: 2rem;
+        margin-left: .5rem;
+    }
     .pause-play {
-        width: 4rem;
+        width: 5rem;
+        height: 5rem;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        background-color: $Char;
+        border-radius: 50%;
+    }
+    .track-title {
+        font-size: 1.75rem;
+    }
+    .track-duration {
+        font-size: 1.25rem;
+        color: grey;
+    }
+    .select-a-track {
+        font-size: 1.25rem;
     }
     img {
         &:hover {

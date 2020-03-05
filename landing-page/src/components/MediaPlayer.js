@@ -9,6 +9,7 @@ const MediaPlayer = props => {
         } else {
             return null;
         }
+        props.setPlaying(!props.playing)
     }
     
     const pauseTrack = () => {
@@ -17,8 +18,8 @@ const MediaPlayer = props => {
         } else {
             return null;
         }
+        props.setPlaying(!props.playing)
     }
-
     
     return (
         <div id="MediaPlayer">
@@ -26,28 +27,28 @@ const MediaPlayer = props => {
             <div>
                 {
                 props.track ? <div>
-                    <span>{ props.trackData.title }</span>
+                    <span className="track-title">{ props.trackData.title }</span>
                     <br />
-                    <span>{ props.trackData.duration }</span>
-                </div> : null
+                    <span className="track-duration">{ props.trackData.duration }</span>
+                </div> : <span className="select-a-track">Select a track</span>
                 }
             </div>
-            
-            
                 <div className="pause-play">
-                    <img
+                    {
+                        props.playing ? <img
                         src={ require('../assets/pause-button.svg') }
                         alt="Pause Button"
                         className="pause-btn"
                         onClick={ () => pauseTrack() }
-                    />
-                    <img
+                    /> : <img
                         src={ require('../assets/play-btn.svg') }
                         alt="Play Button"
-                        className="pause-btn play"
+                        className="play-btn"
                         onClick={ () => playTrack() }
                     />
+                    }
                 </div>
+                
             </div>
         </div>
     )

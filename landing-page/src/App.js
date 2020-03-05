@@ -17,12 +17,10 @@ function App() {
           <h1 className="Logo">Betz<br/>Beatz</h1>
         </div>
       </div>
-      <Nav />
+      {/* <Nav /> */}
       <Switch>
-        <Route exact path="/" component={ Albums } />
-        <Route path="/Songs" component={ Songs } />
-        <Route path="*" component={ Albums } />
-        <Redirect to="/" />
+        <Route exact path="/" component={ Songs } />
+        {/* <Route path="/Songs" component={ Songs } /> */}
       </Switch>
       {/* <Albums />
       <Songs /> */}

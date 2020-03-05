@@ -4,8 +4,9 @@ import songs from '../data/songs';
 
 const Songs = () => {
     const [audioList, setAudioList] = useState([]);
-    const [audio, setAudio] = useState();
     const [audioData, setAudioData] = useState({});
+    const [audio, setAudio] = useState();
+    const [playing, setPlaying] = useState(false);
 
     const createAudioData = link => {
         const rawAudio = new Audio(link);
@@ -17,9 +18,17 @@ const Songs = () => {
         audioList.forEach(item => {
             item.pause();
         })
+        setPlaying(false);
         // SET SELECTED AUDIO
+
         const currentAudio = audioList.filter(url => url.src === link);
         setAudio(currentAudio[0]);
+        // const context = new (window.AudioContext || window.webkitAudioContext)();
+        // const analyser = context.createAnalyser();
+        // const source = context.createMediaElementSource(currentAudio[0]);
+        // source.connect(analyser);
+        // analyser.connect(context.destination);
+
         // CONVERT SECONDS TO MINUTES:SECONDS
         const filtered = audioList.filter(item => item.src === link);
         let rawSec = filtered[0].duration;
@@ -41,14 +50,16 @@ const Songs = () => {
                     songs.map(song => {
                         return <div className="cell" key={ song.id } onClick={() => playSong(song.link, song.title)}>
                         { createAudioData(song.link) }
+                        {  
                             <div className="song-album">
                                 <span className="song-title">{ song.title }</span>
                             </div>
+                        }
                         </div>
                     })
                 }
             </div>
-            <MediaPlayer track={ audio } trackList={ audioList } trackData={ audioData } />
+            <MediaPlayer track={ audio } trackList={ audioList } trackData={ audioData } playing={ playing } setPlaying={ setPlaying } />
         </div>
     )
 }
